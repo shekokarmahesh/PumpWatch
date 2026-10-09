@@ -1,0 +1,15 @@
+{
+  "search_parameters": {
+    "engine": "google_news",
+    "q": "Sparrow Materials",
+    "gl": "in",
+    "hl": "en"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "news_results": []
+}

@@ -1,0 +1,24 @@
+{
+  "search_parameters": {
+    "engine": "google_ads_transparency_center",
+    "text": "Aster Industries",
+    "region": "2356"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "ad_creatives": [
+    {
+      "title": "Aster Industries target workshop · fictional creative",
+      "advertiser": "Target Club",
+      "ad_creative_id": "DEMO0",
+      "format": "text",
+      "first_shown": 1790154000,
+      "last_shown": 1791450000,
+      "details_link": "https://example.com/pumpwatch/aster/ad/0"
+    }
+  ]
+}

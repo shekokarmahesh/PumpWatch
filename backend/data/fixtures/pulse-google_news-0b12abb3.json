@@ -1,0 +1,25 @@
+{
+  "search_parameters": {
+    "engine": "google_news",
+    "q": "Pulse Components",
+    "gl": "in",
+    "hl": "en"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "news_results": [
+    {
+      "title": "Pulse Components fictional local update",
+      "source": {
+        "name": "Demo Blog",
+        "url": "https://example.com"
+      },
+      "link": "https://example.com/pumpwatch/pulse/news/blog",
+      "iso_date": "2026-10-08T09:00:00+00:00"
+    }
+  ]
+}

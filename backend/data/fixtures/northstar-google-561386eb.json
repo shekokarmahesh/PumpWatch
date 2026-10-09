@@ -1,0 +1,23 @@
+{
+  "search_parameters": {
+    "engine": "google",
+    "q": "\"Northstar Systems\" (target OR multibagger OR \"buy call\") (site:t.me OR site:whatsapp.com OR site:chat.whatsapp.com)",
+    "gl": "in",
+    "hl": "en",
+    "tbs": "qdr:m"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "organic_results": [
+    {
+      "title": "Northstar Systems company information",
+      "snippet": "Fictional neutral sample",
+      "link": "https://example.com/northstar",
+      "date": "2026-10-08T09:00:00+00:00"
+    }
+  ]
+}

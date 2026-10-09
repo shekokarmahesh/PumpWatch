@@ -1,0 +1,42 @@
+{
+  "search_parameters": {
+    "engine": "google_ads_transparency_center",
+    "text": "Pulse Components",
+    "region": "2356"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "ad_creatives": [
+    {
+      "title": "Pulse Components target workshop · fictional creative",
+      "advertiser": "Rocket Tips",
+      "ad_creative_id": "DEMO0",
+      "format": "text",
+      "first_shown": 1790154000,
+      "last_shown": 1791450000,
+      "details_link": "https://example.com/pumpwatch/pulse/ad/0"
+    },
+    {
+      "title": "Pulse Components target workshop · fictional creative",
+      "advertiser": "Target Club",
+      "ad_creative_id": "DEMO1",
+      "format": "text",
+      "first_shown": 1790154000,
+      "last_shown": 1791450000,
+      "details_link": "https://example.com/pumpwatch/pulse/ad/1"
+    },
+    {
+      "title": "Pulse Components target workshop · fictional creative",
+      "advertiser": "Rocket Tips",
+      "ad_creative_id": "DEMO2",
+      "format": "text",
+      "first_shown": 1790154000,
+      "last_shown": 1791450000,
+      "details_link": "https://example.com/pumpwatch/pulse/ad/2"
+    }
+  ]
+}

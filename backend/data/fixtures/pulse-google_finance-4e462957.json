@@ -1,0 +1,235 @@
+{
+  "search_parameters": {
+    "engine": "google_finance",
+    "q": "PULSE:NSE",
+    "window": "1M",
+    "hl": "en"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "summary": {
+    "title": "Pulse Components",
+    "stock": "PULSE",
+    "exchange": "NSE",
+    "extracted_price": 165.0
+  },
+  "graph": [
+    {
+      "date": "2026-09-09T09:00:00+00:00",
+      "price": 100.0,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-10T09:00:00+00:00",
+      "price": 102.24,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-11T09:00:00+00:00",
+      "price": 104.48,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-12T09:00:00+00:00",
+      "price": 106.72,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-13T09:00:00+00:00",
+      "price": 108.97,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-14T09:00:00+00:00",
+      "price": 111.21,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-15T09:00:00+00:00",
+      "price": 113.45,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-16T09:00:00+00:00",
+      "price": 115.69,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-17T09:00:00+00:00",
+      "price": 117.93,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-18T09:00:00+00:00",
+      "price": 120.17,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-19T09:00:00+00:00",
+      "price": 122.41,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-20T09:00:00+00:00",
+      "price": 124.66,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-21T09:00:00+00:00",
+      "price": 126.9,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-22T09:00:00+00:00",
+      "price": 129.14,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-23T09:00:00+00:00",
+      "price": 131.38,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-24T09:00:00+00:00",
+      "price": 133.62,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-25T09:00:00+00:00",
+      "price": 135.86,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-26T09:00:00+00:00",
+      "price": 138.1,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-27T09:00:00+00:00",
+      "price": 140.34,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-28T09:00:00+00:00",
+      "price": 142.59,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-29T09:00:00+00:00",
+      "price": 144.83,
+      "volume": 40000
+    },
+    {
+      "date": "2026-09-30T09:00:00+00:00",
+      "price": 147.07,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-01T09:00:00+00:00",
+      "price": 149.31,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-02T09:00:00+00:00",
+      "price": 151.55,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-03T09:00:00+00:00",
+      "price": 153.79,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-04T09:00:00+00:00",
+      "price": 156.03,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-05T09:00:00+00:00",
+      "price": 158.28,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-06T09:00:00+00:00",
+      "price": 160.52,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-07T09:00:00+00:00",
+      "price": 162.76,
+      "volume": 40000
+    },
+    {
+      "date": "2026-10-08T09:00:00+00:00",
+      "price": 165.0,
+      "volume": 40000
+    }
+  ],
+  "financials": [
+    {
+      "title": "Income Statement",
+      "results": [
+        {
+          "date": "Sep 2025",
+          "period_type": "Quarterly",
+          "table": [
+            {
+              "title": "Revenue",
+              "value": "100000000"
+            },
+            {
+              "title": "Net income",
+              "value": "-5000000"
+            }
+          ]
+        },
+        {
+          "date": "Dec 2025",
+          "period_type": "Quarterly",
+          "table": [
+            {
+              "title": "Revenue",
+              "value": "90000000"
+            },
+            {
+              "title": "Net income",
+              "value": "-5000000"
+            }
+          ]
+        },
+        {
+          "date": "Mar 2026",
+          "period_type": "Quarterly",
+          "table": [
+            {
+              "title": "Revenue",
+              "value": "80000000"
+            },
+            {
+              "title": "Net income",
+              "value": "-5000000"
+            }
+          ]
+        },
+        {
+          "date": "Jun 2026",
+          "period_type": "Quarterly",
+          "table": [
+            {
+              "title": "Revenue",
+              "value": "70000000"
+            },
+            {
+              "title": "Net income",
+              "value": "-5000000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

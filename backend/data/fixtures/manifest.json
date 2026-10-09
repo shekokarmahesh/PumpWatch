@@ -1,0 +1,483 @@
+{
+  "as_of": "2026-10-08T09:00:00+00:00",
+  "provenance": "Synthetic fictional scenarios generated on 2026-10-08; not market captures.",
+  "tickers": [
+    {
+      "symbol": "PULSE",
+      "exchange": "NSE",
+      "company_name": "Pulse Components",
+      "is_sme": true,
+      "listing_verified": false,
+      "synthetic": true
+    },
+    {
+      "symbol": "ASTER",
+      "exchange": "NSE",
+      "company_name": "Aster Industries",
+      "is_sme": false,
+      "listing_verified": false,
+      "synthetic": true
+    },
+    {
+      "symbol": "NORTHSTAR",
+      "exchange": "NSE",
+      "company_name": "Northstar Systems",
+      "is_sme": false,
+      "listing_verified": false,
+      "synthetic": true
+    },
+    {
+      "symbol": "ORBIT",
+      "exchange": "BOM",
+      "company_name": "Orbit Consumer",
+      "is_sme": false,
+      "listing_verified": false,
+      "synthetic": true
+    },
+    {
+      "symbol": "SPARROW",
+      "exchange": "BOM",
+      "company_name": "Sparrow Materials",
+      "is_sme": true,
+      "listing_verified": false,
+      "synthetic": true
+    }
+  ],
+  "responses": {
+    "4e462957793b4372cf8fdee2286e34d20089415c00994d2f3349d1092888711e": {
+      "path": "pulse-google_finance-4e462957.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "PULSE:NSE",
+        "window": "1M",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "9ac75faac6192c2e33343b4a5006d17016fb4ebcd6ec13f0cd824047c1905288": {
+      "path": "pulse-google_finance-9ac75faa.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "PULSE:NSE",
+        "window": "1Y",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "08dbc6f930b99585e81a80be394a62516203a3394f4e1fbb5b1bbbbabe9f6e5a": {
+      "path": "pulse-youtube-08dbc6f9.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Pulse Components target",
+        "sp": "EgIIBA=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "fbd57d0acf528aba191b057b3d4eb3b107451e889c5d3df25488e90a75186962": {
+      "path": "pulse-youtube-fbd57d0a.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Pulse Components target",
+        "sp": "EgIIBQ=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "2d2672f0cd29cde85cdee74dba65c0d51633a27da185d6d5a73ab70ee8daba23": {
+      "path": "pulse-google_trends-2d2672f0.json",
+      "params": {
+        "engine": "google_trends",
+        "q": "Pulse Components",
+        "geo": "IN",
+        "data_type": "TIMESERIES",
+        "date": "today 12-m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "6c987d1bf16a33ffafa712cbd39a7202235835cbe4e96f312e5e7732a69cc26a": {
+      "path": "pulse-google-6c987d1b.json",
+      "params": {
+        "engine": "google",
+        "q": "\"Pulse Components\" (target OR multibagger OR \"buy call\") (site:t.me OR site:whatsapp.com OR site:chat.whatsapp.com)",
+        "gl": "in",
+        "hl": "en",
+        "tbs": "qdr:m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "0b12abb3c9052df588036784caa52d188ac264bb676fedfb80c5e5d38287b4a4": {
+      "path": "pulse-google_news-0b12abb3.json",
+      "params": {
+        "engine": "google_news",
+        "q": "Pulse Components",
+        "gl": "in",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "931b3ca9ae1e178a96d10edf84e286864daa5f9b474eae86d22af807ee7b3844": {
+      "path": "pulse-google_ads_transparency_center-931b3ca9.json",
+      "params": {
+        "engine": "google_ads_transparency_center",
+        "text": "Pulse Components",
+        "region": "2356"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "1d2448a75b74f97cd7b3919b1b9e913b1e19c960b84a13b2a0205fe8c4cbf960": {
+      "path": "aster-google_finance-1d2448a7.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "ASTER:NSE",
+        "window": "1M",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "2ccba86dc640a95b8dafd6dd1617456a985e1d101570617433188092aa3beb1c": {
+      "path": "aster-google_finance-2ccba86d.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "ASTER:NSE",
+        "window": "1Y",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "e4c806b5968becf7eef9dd89440020a9f592af17af759c544b5e8553ab085319": {
+      "path": "aster-youtube-e4c806b5.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Aster Industries target",
+        "sp": "EgIIBA=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "f8b897b6c12c3912676726e8ef966859c2462ec7cb2dfdad3138deb22d82936e": {
+      "path": "aster-youtube-f8b897b6.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Aster Industries target",
+        "sp": "EgIIBQ=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "49e6b024263dd955374b5874164976bf721517ff4a6b9f15c1dfc633f205cd53": {
+      "path": "aster-google_trends-49e6b024.json",
+      "params": {
+        "engine": "google_trends",
+        "q": "Aster Industries",
+        "geo": "IN",
+        "data_type": "TIMESERIES",
+        "date": "today 12-m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "5f7d171514e15d8e3fecd673af6711100da16dbb49f59ae5108d12ccf71d213b": {
+      "path": "aster-google-5f7d1715.json",
+      "params": {
+        "engine": "google",
+        "q": "\"Aster Industries\" (target OR multibagger OR \"buy call\") (site:t.me OR site:whatsapp.com OR site:chat.whatsapp.com)",
+        "gl": "in",
+        "hl": "en",
+        "tbs": "qdr:m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "21a70ed4c21d12197d53b353cb89157607e1fcd88ebe52717afad23508f3a2e6": {
+      "path": "aster-google_news-21a70ed4.json",
+      "params": {
+        "engine": "google_news",
+        "q": "Aster Industries",
+        "gl": "in",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "b1240c2fe3083718e90eb480b73c6a69495a018662fb9165952913d898c7c3cf": {
+      "path": "aster-google_ads_transparency_center-b1240c2f.json",
+      "params": {
+        "engine": "google_ads_transparency_center",
+        "text": "Aster Industries",
+        "region": "2356"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "2858c0d8311317427a6b903248647a6761c70f4aa1120d3f7a7e667d631c7d8c": {
+      "path": "northstar-google_finance-2858c0d8.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "NORTHSTAR:NSE",
+        "window": "1M",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "4aa877aaa5f6d90b4784cc3d2ffe5f9cea1195867ef904f7ba0a98161a4153a5": {
+      "path": "northstar-google_finance-4aa877aa.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "NORTHSTAR:NSE",
+        "window": "1Y",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "068fb2ae21d27f30c77d21cbbaec3c4180e2ccba0c514e4b56c89371ce385e37": {
+      "path": "northstar-youtube-068fb2ae.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Northstar Systems target",
+        "sp": "EgIIBA=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "ba73f8f09db4a4b22c96aa23fc6ba75799f11f0cb9b269a3b7568c49fb39ecad": {
+      "path": "northstar-youtube-ba73f8f0.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Northstar Systems target",
+        "sp": "EgIIBQ=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "bf46f3343ad2ef1c632ea8cba02847c861bd806cb782a97740bf859786ac6986": {
+      "path": "northstar-google_trends-bf46f334.json",
+      "params": {
+        "engine": "google_trends",
+        "q": "Northstar Systems",
+        "geo": "IN",
+        "data_type": "TIMESERIES",
+        "date": "today 12-m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "561386eb419bce3a9ae2c27865f8000e1af845ab29a3210357cdf882ec393fb5": {
+      "path": "northstar-google-561386eb.json",
+      "params": {
+        "engine": "google",
+        "q": "\"Northstar Systems\" (target OR multibagger OR \"buy call\") (site:t.me OR site:whatsapp.com OR site:chat.whatsapp.com)",
+        "gl": "in",
+        "hl": "en",
+        "tbs": "qdr:m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "65cc1862ae6b51a85cb6abb8d09532d7ee2bb4e36307bbcde09324c3f68acb58": {
+      "path": "northstar-google_news-65cc1862.json",
+      "params": {
+        "engine": "google_news",
+        "q": "Northstar Systems",
+        "gl": "in",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "f051758e829198208a179dcee40ede4352b3c75ced827419d4de13997f939174": {
+      "path": "northstar-google_ads_transparency_center-f051758e.json",
+      "params": {
+        "engine": "google_ads_transparency_center",
+        "text": "Northstar Systems",
+        "region": "2356"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "2760c7bcd575f1d0ef0290015d3f13de2cf718915a9c58dfa8acef4bc904e277": {
+      "path": "orbit-google_finance-2760c7bc.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "ORBIT:BOM",
+        "window": "1M",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "38f721ca14660ac067706089705921661cb112b45db69867281074f401e59770": {
+      "path": "orbit-google_finance-38f721ca.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "ORBIT:BOM",
+        "window": "1Y",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "534599afb5dd1d3f24181eb080ad3c3a0f0f79069dae1a683c9bef90ba49effc": {
+      "path": "orbit-youtube-534599af.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Orbit Consumer target",
+        "sp": "EgIIBA=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "4ae2809ffd8633e0456da91d981b306fde07f696a2cce791cb08ad11e93e5e9e": {
+      "path": "orbit-youtube-4ae2809f.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Orbit Consumer target",
+        "sp": "EgIIBQ=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "347ca39c0022bc661cd239877fa1fe5fe6af67c756a98470323f38ef02267de5": {
+      "path": "orbit-google_trends-347ca39c.json",
+      "params": {
+        "engine": "google_trends",
+        "q": "Orbit Consumer",
+        "geo": "IN",
+        "data_type": "TIMESERIES",
+        "date": "today 12-m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "096ccac4d7a034137e052175ad091709830595fae95be5d9239022feefff864e": {
+      "path": "orbit-google-096ccac4.json",
+      "params": {
+        "engine": "google",
+        "q": "\"Orbit Consumer\" (target OR multibagger OR \"buy call\") (site:t.me OR site:whatsapp.com OR site:chat.whatsapp.com)",
+        "gl": "in",
+        "hl": "en",
+        "tbs": "qdr:m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "8275be7e620ada95dc8c0bab527943e6fb239c47fa1036a1f706e56c68668688": {
+      "path": "orbit-google_news-8275be7e.json",
+      "params": {
+        "engine": "google_news",
+        "q": "Orbit Consumer",
+        "gl": "in",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "d334e4e49fc283087c2e130938fa7794b1c42d12ecac7e53f1d1c571a82dfef0": {
+      "path": "orbit-google_ads_transparency_center-d334e4e4.json",
+      "params": {
+        "engine": "google_ads_transparency_center",
+        "text": "Orbit Consumer",
+        "region": "2356"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "49b5ba1f2c4df1084d344127d411284a9698541f09e7c77a4cb736cc91fdcba7": {
+      "path": "sparrow-google_finance-49b5ba1f.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "SPARROW:BOM",
+        "window": "1M",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "971cbacb332c7128c4dbd09b94d0580dd2825a68d6e7f109cc224dcefb8ac158": {
+      "path": "sparrow-google_finance-971cbacb.json",
+      "params": {
+        "engine": "google_finance",
+        "q": "SPARROW:BOM",
+        "window": "1Y",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "35faaaa3ecdbc8a4f87f407ade4d5c1a863b58bb4c2acb046c779dae71f5b0c9": {
+      "path": "sparrow-youtube-35faaaa3.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Sparrow Materials target",
+        "sp": "EgIIBA=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "0d8b7f40a63db5b6c9b86e764330f08e3e3c089d676e1bd6ff60d82749e2dd1f": {
+      "path": "sparrow-youtube-0d8b7f40.json",
+      "params": {
+        "engine": "youtube",
+        "search_query": "Sparrow Materials target",
+        "sp": "EgIIBQ=="
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "324e8c81ccfd090072e2037a18da23387b1297a8ad4dec427144c267e27f0f4a": {
+      "path": "sparrow-google_trends-324e8c81.json",
+      "params": {
+        "engine": "google_trends",
+        "q": "Sparrow Materials",
+        "geo": "IN",
+        "data_type": "TIMESERIES",
+        "date": "today 12-m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "5d3ead1b6dd8f525009953d9a79adec9246c9f240b08eaf97692f8cdaf084e6d": {
+      "path": "sparrow-google-5d3ead1b.json",
+      "params": {
+        "engine": "google",
+        "q": "\"Sparrow Materials\" (target OR multibagger OR \"buy call\") (site:t.me OR site:whatsapp.com OR site:chat.whatsapp.com)",
+        "gl": "in",
+        "hl": "en",
+        "tbs": "qdr:m"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "eab81541f40c3ab52e00d89a48f42677fbfa987d954a197696ce28577dc67f63": {
+      "path": "sparrow-google_news-eab81541.json",
+      "params": {
+        "engine": "google_news",
+        "q": "Sparrow Materials",
+        "gl": "in",
+        "hl": "en"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    },
+    "ab76a9da0ad688564d88ccae7e09c1e653901493a88548ec293185d8da892691": {
+      "path": "sparrow-google_ads_transparency_center-ab76a9da.json",
+      "params": {
+        "engine": "google_ads_transparency_center",
+        "text": "Sparrow Materials",
+        "region": "2356"
+      },
+      "captured_at": "2026-10-08T09:00:00+00:00",
+      "synthetic": true
+    }
+  }
+}

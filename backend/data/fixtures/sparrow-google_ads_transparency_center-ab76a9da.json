@@ -1,0 +1,14 @@
+{
+  "search_parameters": {
+    "engine": "google_ads_transparency_center",
+    "text": "Sparrow Materials",
+    "region": "2356"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "ad_creatives": []
+}

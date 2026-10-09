@@ -1,0 +1,25 @@
+{
+  "search_parameters": {
+    "engine": "google_news",
+    "q": "Aster Industries",
+    "gl": "in",
+    "hl": "en"
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "news_results": [
+    {
+      "title": "Aster Industries: fictional quarterly results sample",
+      "source": {
+        "name": "moneycontrol.com",
+        "url": "https://moneycontrol.com"
+      },
+      "link": "https://example.com/pumpwatch/aster/news/0",
+      "iso_date": "2026-10-04T09:00:00+00:00"
+    }
+  ]
+}

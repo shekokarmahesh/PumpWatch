@@ -1,0 +1,96 @@
+{
+  "search_parameters": {
+    "engine": "youtube",
+    "search_query": "Aster Industries target",
+    "sp": "EgIIBA=="
+  },
+  "search_metadata": {
+    "status": "Success",
+    "created_at": "2026-10-08T09:00:00+00:00"
+  },
+  "_pumpwatch_fetched_at": "2026-10-08T09:00:00+00:00",
+  "_pumpwatch_synthetic": true,
+  "video_results": [
+    {
+      "title": "Aster Industries: multibagger breakout · demo 1",
+      "published_date": "2026-10-07T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-0",
+      "channel": {
+        "name": "Target Club"
+      },
+      "views": 1200
+    },
+    {
+      "title": "Aster Industries: target update · demo 2",
+      "published_date": "2026-10-06T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-1",
+      "channel": {
+        "name": "Measured Markets"
+      },
+      "views": 2400
+    },
+    {
+      "title": "Aster Industries: multibagger breakout · demo 3",
+      "published_date": "2026-10-05T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-2",
+      "channel": {
+        "name": "Target Club"
+      },
+      "views": 3600
+    },
+    {
+      "title": "Aster Industries: target update · demo 4",
+      "published_date": "2026-10-04T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-3",
+      "channel": {
+        "name": "Measured Markets"
+      },
+      "views": 4800
+    },
+    {
+      "title": "Aster Industries: multibagger breakout · demo 5",
+      "published_date": "2026-10-03T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-4",
+      "channel": {
+        "name": "Target Club"
+      },
+      "views": 6000
+    },
+    {
+      "title": "Aster Industries: target update · demo 6",
+      "published_date": "2026-10-02T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-5",
+      "channel": {
+        "name": "Measured Markets"
+      },
+      "views": 7200
+    },
+    {
+      "title": "Aster Industries: multibagger breakout · demo 7",
+      "published_date": "2026-10-01T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-6",
+      "channel": {
+        "name": "Target Club"
+      },
+      "views": 8400
+    },
+    {
+      "title": "Aster Industries: target update · demo 8",
+      "published_date": "2026-09-30T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-7",
+      "channel": {
+        "name": "Measured Markets"
+      },
+      "views": 9600
+    },
+    {
+      "title": "Aster Industries: multibagger breakout · demo 9",
+      "published_date": "2026-09-29T09:00:00+00:00",
+      "link": "https://example.com/pumpwatch/aster/video/recent-8",
+      "channel": {
+        "name": "Target Club"
+      },
+      "views": 10800
+    }
+  ]
+}
