@@ -9,6 +9,8 @@ Look beyond the stock tip. PumpWatch compares public attention with supporting e
 Requires Python **3.12+** and Node **20.19+** with npm or pnpm. From this directory:
 
 ```sh
+git clone https://github.com/shekokarmahesh/PumpWatch.git
+cd PumpWatch
 python3 scripts/run.py
 ```
 
@@ -103,7 +105,7 @@ YouTube counts cover returned search samples, not all uploads. Relative month da
 
 Use the watchlist's **Take daily snapshot** action or the CLI. Repeated snapshots on an IST calendar day are skipped. The three-request job reuses prior video/volume baselines and unavailable signal values with explicit **carried** labels. A fresh ticker without a full-analysis baseline may have insufficient data. History contains one latest observation per day and retains source run IDs.
 
-`.github/workflows/snapshot.yml` defines the 09:30 IST schedule but scheduled execution is **opt-in**: set repository variable `ENABLE_DAILY_SNAPSHOTS=true`. It defaults to replay and an empty `snapshots/watchlist.json`. Populate that list with explicit ticker keys. To use live data, configure repository variable `PUMPWATCH_MODE=cache-first` and secret `SERPAPI_KEY`. The job restores local state from GitHub cache and commits only exported observation JSON. Cache eviction can lose baselines and local credit accounting; review the account budget before enabling live runs. No workflow has been activated or published by this build.
+`.github/workflows/snapshot.yml` defines the 09:30 IST schedule but scheduled execution is **opt-in**: set repository variable `ENABLE_DAILY_SNAPSHOTS=true`. It defaults to replay and an empty `snapshots/watchlist.json`. Populate that list with explicit ticker keys. To use live data, configure repository variable `PUMPWATCH_MODE=cache-first` and secret `SERPAPI_KEY`. The job restores local state from GitHub cache and commits only exported observation JSON. Cache eviction can lose baselines and local credit accounting; review the account budget before enabling live runs. Publishing this workflow does not opt the repository into scheduled runs.
 
 ## Architecture and storage
 

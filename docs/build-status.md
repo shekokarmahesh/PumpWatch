@@ -8,6 +8,8 @@ Live collection was tested on 8 October 2026 for Reliance, TCS, Orient Cables an
 
 The UI refresh uses adapted beUI motion primitives, a dark theme, bento cards, animated report scores, and interactive hype/support charts. Component provenance and open licenses are documented in [ui-sources.md](ui-sources.md). Browser checks covered search confirmation, saving a stock, evidence expansion and scoring rules, daily snapshot idempotency, chart toggles, and 1280px/390px layouts. The mobile chart tooltip overflow was fixed. Fonts are self-hosted for offline replay. The frontend test suite and production build pass.
 
+The public [GitHub repository](https://github.com/shekokarmahesh/PumpWatch) was published on 10 October 2026 in separate phases for project setup, backend implementation, frontend implementation, and tests/CI/documentation. Local verification passed 59 backend tests, 14 frontend tests, Python lint, and the production build. Credentials, local SQLite state, provider caches, installed dependencies, and generated build output are excluded from version control.
+
 ## Required before a credible live submission
 
 1. Expand the four-stock smoke test into five reviewed real-stock fixtures. Choose any enforcement examples only after verifying the cited order; do not infer wrongdoing from the PRD.
@@ -17,7 +19,7 @@ The UI refresh uses adapted beUI motion primitives, a dark theme, bento cards, a
 5. Import reviewed NSE Emerge/BSE SME lists with source and capture dates. The shipped real lists are empty.
 6. Broaden latency and account-credit verification. The smoke tests completed in 0.4–13.3 seconds with a mixture of fresh and cached responses; this does not establish the 30-second target across all uncached stocks or provider conditions.
 7. Decide whether to enable the opt-in GitHub snapshot schedule. Persisted baselines are needed for useful cheap snapshots; a new ticker can initially be insufficient.
-8. Create the GitHub repository, record the demo and complete the submission. No external publication, account setup, registration or submission was performed.
+8. Record the demo and complete the hackathon submission using the public repository. Hackathon registration and submission have not been performed by this build.
 
 ## Explicit PRD interpretations
 
