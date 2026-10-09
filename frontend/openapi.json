@@ -1,0 +1,1452 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PumpWatch",
+    "description": "This tool measures public attention, not value. It is not investment advice.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/resolve": {
+      "post": {
+        "summary": "Resolve",
+        "operationId": "resolve_api_resolve_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Ticker"
+                  },
+                  "type": "array",
+                  "title": "Response Resolve Api Resolve Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/analyse": {
+      "post": {
+        "summary": "Analyse",
+        "operationId": "analyse_api_analyse_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TickerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Analysis"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/searches": {
+      "get": {
+        "summary": "Searches",
+        "operationId": "searches_api_searches_get",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PastSearch"
+                  },
+                  "title": "Response Searches Api Searches Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/runs/{run_id}": {
+      "get": {
+        "summary": "Run",
+        "operationId": "run_api_runs__run_id__get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Analysis"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/runs/{run_id}/calls": {
+      "get": {
+        "summary": "Calls",
+        "operationId": "calls_api_runs__run_id__calls_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Call"
+                  },
+                  "title": "Response Calls Api Runs  Run Id  Calls Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/runs/{run_id}/export": {
+      "get": {
+        "summary": "Export",
+        "operationId": "export_api_runs__run_id__export_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "json",
+                "md"
+              ],
+              "type": "string",
+              "default": "json",
+              "title": "Format"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tickers/{symbol}/history": {
+      "get": {
+        "summary": "History",
+        "operationId": "history_api_tickers__symbol__history_get",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Symbol"
+            }
+          },
+          {
+            "name": "exchange",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "NSE",
+                "BOM"
+              ],
+              "type": "string",
+              "default": "NSE",
+              "title": "Exchange"
+            }
+          },
+          {
+            "name": "days",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 365,
+              "minimum": 1,
+              "default": 30,
+              "title": "Days"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoryPoint"
+                  },
+                  "title": "Response History Api Tickers  Symbol  History Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tickers/{symbol}/latest": {
+      "get": {
+        "summary": "Latest",
+        "operationId": "latest_api_tickers__symbol__latest_get",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Symbol"
+            }
+          },
+          {
+            "name": "exchange",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "NSE",
+                "BOM"
+              ],
+              "type": "string",
+              "default": "NSE",
+              "title": "Exchange"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Analysis"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/watchlist": {
+      "get": {
+        "summary": "Watchlist",
+        "operationId": "watchlist_api_watchlist_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/WatchItem"
+                  },
+                  "type": "array",
+                  "title": "Response Watchlist Api Watchlist Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add Watchlist",
+        "operationId": "add_watchlist_api_watchlist_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TickerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/WatchItem"
+                  },
+                  "type": "array",
+                  "title": "Response Add Watchlist Api Watchlist Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Watchlist",
+        "operationId": "remove_watchlist_api_watchlist_delete",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TickerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/WatchItem"
+                  },
+                  "type": "array",
+                  "title": "Response Remove Watchlist Api Watchlist Delete"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/snapshot": {
+      "post": {
+        "summary": "Snapshot",
+        "operationId": "snapshot_api_snapshot_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/SnapshotRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnapshotResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Analysis": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "ticker": {
+            "$ref": "#/components/schemas/Ticker"
+          },
+          "run_at": {
+            "type": "string",
+            "title": "Run At"
+          },
+          "data_as_of": {
+            "type": "string",
+            "title": "Data As Of"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "live",
+              "cache-first",
+              "replay"
+            ],
+            "title": "Mode"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "hype_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hype Score"
+          },
+          "support_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Support Score"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "Low",
+              "Elevated",
+              "High",
+              "Insufficient data"
+            ],
+            "title": "Verdict"
+          },
+          "signals_available": {
+            "type": "integer",
+            "title": "Signals Available"
+          },
+          "support_available": {
+            "type": "integer",
+            "title": "Support Available"
+          },
+          "reasons": {
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            },
+            "type": "array",
+            "title": "Reasons"
+          },
+          "signals": {
+            "items": {
+              "$ref": "#/components/schemas/Signal"
+            },
+            "type": "array",
+            "title": "Signals"
+          },
+          "promoters": {
+            "items": {
+              "$ref": "#/components/schemas/RegistryMatch"
+            },
+            "type": "array",
+            "title": "Promoters"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer"
+          },
+          "snapshot": {
+            "type": "boolean",
+            "title": "Snapshot",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "ticker",
+          "run_at",
+          "data_as_of",
+          "mode",
+          "synthetic",
+          "hype_score",
+          "support_score",
+          "verdict",
+          "signals_available",
+          "support_available",
+          "reasons",
+          "signals",
+          "promoters",
+          "warnings",
+          "disclaimer"
+        ],
+        "title": "Analysis"
+      },
+      "Call": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "engine": {
+            "type": "string",
+            "title": "Engine"
+          },
+          "params": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Params"
+          },
+          "params_hash": {
+            "type": "string",
+            "title": "Params Hash"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "live",
+              "cache",
+              "replay"
+            ],
+            "title": "Mode"
+          },
+          "cache_hit": {
+            "type": "boolean",
+            "title": "Cache Hit"
+          },
+          "credits_spent": {
+            "type": "integer",
+            "title": "Credits Spent"
+          },
+          "raw_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Path"
+          },
+          "fetched_at": {
+            "type": "string",
+            "title": "Fetched At"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "engine",
+          "params",
+          "params_hash",
+          "mode",
+          "cache_hit",
+          "credits_spent",
+          "raw_path",
+          "fetched_at",
+          "status"
+        ],
+        "title": "Call"
+      },
+      "Evidence": {
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Published At"
+          },
+          "promoter_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Promoter Name"
+          },
+          "promoter": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryMatch"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "url",
+          "title",
+          "source"
+        ],
+        "title": "Evidence"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Health": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "credits_spent_this_month": {
+            "type": "integer",
+            "title": "Credits Spent This Month"
+          },
+          "credit_budget": {
+            "type": "integer",
+            "title": "Credit Budget"
+          },
+          "credits_spent_this_hour": {
+            "type": "integer",
+            "title": "Credits Spent This Hour"
+          },
+          "hourly_credit_budget": {
+            "type": "integer",
+            "title": "Hourly Credit Budget"
+          },
+          "credit_accounting": {
+            "type": "string",
+            "title": "Credit Accounting"
+          },
+          "fixture_tickers": {
+            "items": {
+              "$ref": "#/components/schemas/Ticker"
+            },
+            "type": "array",
+            "title": "Fixture Tickers"
+          },
+          "fixture_provenance": {
+            "type": "string",
+            "title": "Fixture Provenance"
+          },
+          "registry_ready": {
+            "type": "boolean",
+            "title": "Registry Ready"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "mode",
+          "credits_spent_this_month",
+          "credit_budget",
+          "credits_spent_this_hour",
+          "hourly_credit_budget",
+          "credit_accounting",
+          "fixture_tickers",
+          "fixture_provenance",
+          "registry_ready",
+          "disclaimer"
+        ],
+        "title": "Health"
+      },
+      "HistoryPoint": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "date": {
+            "type": "string",
+            "title": "Date"
+          },
+          "hype_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hype Score"
+          },
+          "support_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Support Score"
+          },
+          "verdict": {
+            "type": "string",
+            "title": "Verdict"
+          },
+          "new_promoter": {
+            "type": "boolean",
+            "title": "New Promoter"
+          },
+          "new_ad": {
+            "type": "boolean",
+            "title": "New Ad"
+          },
+          "snapshot": {
+            "type": "boolean",
+            "title": "Snapshot"
+          },
+          "carried": {
+            "type": "boolean",
+            "title": "Carried"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "date",
+          "hype_score",
+          "support_score",
+          "verdict",
+          "new_promoter",
+          "new_ad",
+          "snapshot",
+          "carried",
+          "synthetic"
+        ],
+        "title": "HistoryPoint"
+      },
+      "PastSearch": {
+        "properties": {
+          "ticker": {
+            "$ref": "#/components/schemas/Ticker"
+          },
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "run_at": {
+            "type": "string",
+            "title": "Run At"
+          },
+          "hype_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hype Score"
+          },
+          "support_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Support Score"
+          },
+          "verdict": {
+            "type": "string",
+            "title": "Verdict"
+          },
+          "signals_available": {
+            "type": "integer",
+            "title": "Signals Available"
+          },
+          "support_available": {
+            "type": "integer",
+            "title": "Support Available"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "run_count": {
+            "type": "integer",
+            "title": "Run Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ticker",
+          "run_id",
+          "run_at",
+          "hype_score",
+          "support_score",
+          "verdict",
+          "signals_available",
+          "support_available",
+          "mode",
+          "synthetic",
+          "run_count"
+        ],
+        "title": "PastSearch"
+      },
+      "QueryRequest": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Query"
+          }
+        },
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "title": "QueryRequest"
+      },
+      "Reason": {
+        "properties": {
+          "signal_name": {
+            "type": "string",
+            "title": "Signal Name"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          }
+        },
+        "type": "object",
+        "required": [
+          "signal_name",
+          "title",
+          "explanation",
+          "score",
+          "evidence"
+        ],
+        "title": "Reason"
+      },
+      "RegistryMatch": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "registered",
+              "possible",
+              "not_found",
+              "not_checked"
+            ],
+            "title": "Status"
+          },
+          "similarity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Similarity"
+          },
+          "registry_row": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Row"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "status"
+        ],
+        "title": "RegistryMatch"
+      },
+      "Signal": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "hype",
+              "support"
+            ],
+            "title": "Side"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit",
+            "default": ""
+          },
+          "window": {
+            "type": "string",
+            "title": "Window"
+          },
+          "has_data": {
+            "type": "boolean",
+            "title": "Has Data",
+            "default": false
+          },
+          "score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          },
+          "weight": {
+            "type": "number",
+            "title": "Weight"
+          },
+          "rule": {
+            "type": "string",
+            "title": "Rule"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          },
+          "inputs": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Inputs"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          },
+          "call_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Call Ids"
+          },
+          "carried": {
+            "type": "boolean",
+            "title": "Carried",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label",
+          "side",
+          "window",
+          "weight",
+          "rule",
+          "explanation"
+        ],
+        "title": "Signal"
+      },
+      "SnapshotRequest": {
+        "properties": {
+          "symbol": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9&._-]{1,30}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Symbol"
+          },
+          "exchange": {
+            "type": "string",
+            "enum": [
+              "NSE",
+              "BOM"
+            ],
+            "title": "Exchange",
+            "default": "NSE"
+          }
+        },
+        "type": "object",
+        "title": "SnapshotRequest"
+      },
+      "SnapshotResponse": {
+        "properties": {
+          "rows_written": {
+            "type": "integer",
+            "title": "Rows Written"
+          },
+          "run_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Run Ids"
+          },
+          "skipped": {
+            "type": "integer",
+            "title": "Skipped"
+          }
+        },
+        "type": "object",
+        "required": [
+          "rows_written",
+          "run_ids",
+          "skipped"
+        ],
+        "title": "SnapshotResponse"
+      },
+      "Ticker": {
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "title": "Symbol"
+          },
+          "exchange": {
+            "type": "string",
+            "enum": [
+              "NSE",
+              "BOM"
+            ],
+            "title": "Exchange"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "is_sme": {
+            "type": "boolean",
+            "title": "Is Sme",
+            "default": false
+          },
+          "listing_verified": {
+            "type": "boolean",
+            "title": "Listing Verified",
+            "default": false
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "symbol",
+          "exchange",
+          "company_name"
+        ],
+        "title": "Ticker"
+      },
+      "TickerRequest": {
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9&._-]{1,30}$",
+            "title": "Symbol"
+          },
+          "exchange": {
+            "type": "string",
+            "enum": [
+              "NSE",
+              "BOM"
+            ],
+            "title": "Exchange",
+            "default": "NSE"
+          }
+        },
+        "type": "object",
+        "required": [
+          "symbol"
+        ],
+        "title": "TickerRequest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WatchItem": {
+        "properties": {
+          "ticker": {
+            "$ref": "#/components/schemas/Ticker"
+          },
+          "latest": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Analysis"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "ticker",
+          "latest"
+        ],
+        "title": "WatchItem"
+      }
+    }
+  }
+}
