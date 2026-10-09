@@ -1,0 +1,45 @@
+name: Daily watchlist snapshot
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * *' # 09:30 IST; GitHub schedules can be delayed.
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    # Scheduled spending is disabled until the repository owner explicitly opts in.
+    if: github.event_name == 'workflow_dispatch' || vars.ENABLE_DAILY_SNAPSHOTS == 'true'
+    concurrency:
+      group: pumpwatch-snapshots
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: backend
+      PUMPWATCH_MODE: ${{ vars.PUMPWATCH_MODE || 'replay' }}
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      PUMPWATCH_MONTHLY_BUDGET: '250'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r backend/requirements.lock
+      - uses: actions/cache/restore@v4
+        with:
+          path: .local
+          key: pumpwatch-state-${{ github.run_id }}
+          restore-keys: pumpwatch-state-
+      - run: python scripts/snapshot_watchlist.py
+      - uses: actions/cache/save@v4
+        with:
+          path: .local
+          key: pumpwatch-state-${{ github.run_id }}
+      - name: Commit changed observations
+        run: |
+          git config user.name "PumpWatch snapshots"
+          git config user.email "snapshots@users.noreply.github.com"
+          git add snapshots/*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record daily watchlist observations"
+            git push
+          fi
